@@ -1,8 +1,56 @@
-<html>
+<html lang="en">
     <head>
-        <title>To Do List</title>
+		<title>To Do List</title>
+		<style type="text/css">
+			
+			body {
+				background-image: url("<?php echo base_url();?>/assets/img/todolist.png");				
+				background-size: cover;	
+				font-family: Arial, Helvetica, sans-serif;			
+			}
+
+			/* The Modal (background) */
+			.modal {
+			display: none; /* Hidden by default */
+			position: fixed; /* Stay in place */
+			z-index: 1; /* Sit on top */
+			padding-top: 100px; /* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			overflow: auto; /* Enable scroll if needed */
+			background-color: rgb(0,0,0); /* Fallback color */
+			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+			}
+
+			/* Modal Content */
+			.modal-content {
+			background-color: #fefefe;
+			margin: auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 80%;
+			}
+
+			/* The Close Button */
+			.close {
+			color: #aaaaaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+			}
+		</style>
         <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
-        <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/style.css">
+		<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -34,12 +82,12 @@
             </ul>
                 <?php } else { ?>
             <ul class="navbar-nav mv-auto">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url();?>users/login">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url();?>users/register">Register</a>
-                </li>
+                </li> -->
                 <? } ?>
             </ul>
         </div>
@@ -69,5 +117,3 @@
         <?php if($this->session->flashdata('user_logged_out')): ?>
             <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_logged_out').'</p>'; ?>
         <?php endif; ?>
-
-

@@ -1,10 +1,6 @@
-.priority {
-    color: forestgreen;
-}
-
-.post-date{
-    background:lightgray;
-    padding:4px;
-    margin:3px 0;
-    display:block;
+.post-date {
+	background: lightgray;
+	padding: 4px;
+	margin: 3px 0;
+	display: block;
 }

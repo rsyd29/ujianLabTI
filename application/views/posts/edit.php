@@ -20,9 +20,10 @@
 	</div>
 	<label for="" style="color: white">Type: </label>
 	<select class="form-control" name="priority">
-		<option>Urgent</option>
-		<option>Regular</option>
-		<option>Not important</option>
+		<option>High Priority</option>
+		<option>Medium Priority</option>
+		<option>Low Priority</option>
+		<option>No Priority</option>
 	</select>
 	<br>
 	<button type="submit" class="btn btn-primary col-md-2 offset-md-5"">Edit</button>
